@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Sales CRM - Nur Asyiqin Ahmad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4E4B5;
+            --dark: #0a0a0a;
+            --dark-card: #1a1a1a;
+            --gray: #888888;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--dark-card);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--gold);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--gray);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--dark-card);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+        }
+
+        .form-section, .clients-section {
+            background: var(--dark-card);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--dark);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 5px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        button {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .client-card {
+            background: var(--dark);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+
+        .client-card:hover {
+            border-color: var(--gold);
+        }
+
+        .client-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .client-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .status-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-new { background: #4A90E2; color: white; }
+        .status-contacted { background: #F5A623; color: white; }
+        .status-negotiating { background: #BD10E0; color: white; }
+        .status-closed { background: #7ED321; color: white; }
+        .status-lost { background: #D0021B; color: white; }
+
+        .client-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .detail-item {
+            font-size: 0.9rem;
+        }
+
+        .detail-label {
+            color: var(--gray);
+            font-size: 0.8rem;
+        }
+
+        .detail-value {
+            color: white;
+            font-weight: 500;
+        }
+
+        .client-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            width: auto;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-small:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .btn-delete {
+            border-color: #D0021B;
+            color: #D0021B;
+        }
+
+        .btn-delete:hover {
+            background: #D0021B;
+            color: white;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
+        }
+
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .client-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--gray);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            width: auto;
+        }
+
+        .filter-btn.active {
+            background: var(--gold);
+            color: var(--dark);
+            border-color: var(--gold);
+        }
+
+        .notes {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Property Sales CRM</h1>
+            <p class="subtitle">CLIENT RELATIONSHIP MANAGEMENT SYSTEM</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="stat-card">
+                <div class="stat-value" id="totalClients">0</div>
+                <div class="stat-label">Total Clients</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="activeDeals">0</div>
+                <div class="stat-label">Active Deals</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="closedDeals">0</div>
+                <div class="stat-label">Closed Deals</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalRevenue">RM 0</div>
+                <div class="stat-label">Total Revenue</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2>Add New Client</h2>
+                <form id="clientForm">
+                    <div class="form-group">
+                        <label>Client Name *</label>
+                        <input type="text" id="clientName" required placeholder="Enter client name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="clientPhone" required placeholder="+60 12-345 6789">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="clientEmail" placeholder="client@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Property Interest</label>
+                        <input type="text" id="propertyInterest" placeholder="e.g., SPEKTRA HOUSE Type A">
+                    </div>
+                    <div class="form-group">
+                        <label>Budget Range (RM)</label>
+                        <input type="text" id="budget" placeholder="e.g., 300,000 - 400,000">
+                    </div>
+                    <div class="form-group">
+                        <label>Status *</label>
+                        <select id="status" required>
+                            <option value="New Lead">New Lead</option>
+                            <option value="Contacted">Contacted</option>
+                            <option value="Negotiating">Negotiating</option>
+                            <option value="Closed">Closed</option>
+                            <option value="Lost">Lost</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Notes</label>
+                        <textarea id="notes" placeholder="Add any important notes about this client..."></textarea>
+                    </div>
+                    <button type="submit">Add Client</button>
+                </form>
+            </div>
+
+            <div class="clients-section">
+                <h2>Clients Pipeline</h2>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Clients</button>
+                    <button class="filter-btn" data-filter="New Lead">New Leads</button>
+                    <button class="filter-btn" data-filter="Contacted">Contacted</button>
+                    <button class="filter-btn" data-filter="Negotiating">Negotiating</button>
+                    <button class="filter-btn" data-filter="Closed">Closed</button>
+                </div>
+                <div id="clientsList">
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <p>No clients yet. Add your first client to get started!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize clients from localStorage
+        let clients = JSON.parse(localStorage.getItem('crmClients')) || [];
+        let currentFilter = 'all';
+
+        // Update dashboard stats
+        function updateDashboard() {
+            document.getElementById('totalClients').textContent = clients.length;
+            
+            const activeDeals = clients.filter(c => 
+                c.status === 'New Lead' || c.status === 'Contacted' || c.status === 'Negotiating'
+            ).length;
+            document.getElementById('activeDeals').textContent = activeDeals;
+            
+            const closedDeals = clients.filter(c => c.status === 'Closed').length;
+            document.getElementById('closedDeals').textContent = closedDeals;
+            
+            // Calculate total revenue (for closed deals with budget)
+            let totalRevenue = 0;
+            clients.forEach(client => {
+                if (client.status === 'Closed' && client.budget) {
+                    const match = client.budget.match(/[\d,]+/);
+                    if (match) {
+                        totalRevenue += parseInt(match[0].replace(/,/g, ''));
+                    }
+                }
+            });
+            document.getElementById('totalRevenue').textContent = 
+                'RM ' + totalRevenue.toLocaleString();
+        }
+
+        // Render clients list
+        function renderClients() {
+            const clientsList = document.getElementById('clientsList');
+            
+            let filteredClients = currentFilter === 'all' 
+                ? clients 
+                : clients.filter(c => c.status === currentFilter);
+            
+            if (filteredClients.length === 0) {
+                clientsList.innerHTML = `
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <p>No clients found for this filter.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            clientsList.innerHTML = filteredClients.map((client, index) => {
+                const statusClass = client.status.toLowerCase().replace(' ', '-');
+                return `
+                    <div class="client-card">
+                        <div class="client-header">
+                            <div class="client-name">${client.name}</div>
+                            <div class="status-badge status-${statusClass}">${client.status}</div>
+                        </div>
+                        <div class="client-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Phone</div>
+                                <div class="detail-value">${client.phone}</div>
+                            </div>
+                            ${client.email ? `
+                            <div class="detail-item">
+                                <div class="detail-label">Email</div>
+                                <div class="detail-value">${client.email}</div>
+                            </div>` : ''}
+                            ${client.property ? `
+                            <div class="detail-item">
+                                <div class="detail-label">Property Interest</div>
+                                <div class="detail-value">${client.property}</div>
+                            </div>` : ''}
+                            ${client.budget ? `
+                            <div class="detail-item">
+                                <div class="detail-label">Budget</div>
+                                <div class="detail-value">RM ${client.budget}</div>
+                            </div>` : ''}
+                        </div>
+                        ${client.notes ? `
+                        <div class="notes">
+                            📝 ${client.notes}
+                        </div>` : ''}
+                        <div class="client-actions">
+                            <button class="btn-small" onclick="editClient(${clients.indexOf(client)})">Edit</button>
+                            <button class="btn-small btn-delete" onclick="deleteClient(${clients.indexOf(client)})">Delete</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Add new client
+        document.getElementById('clientForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const newClient = {
+                name: document.getElementById('clientName').value,
+                phone: document.getElementById('clientPhone').value,
+                email: document.getElementById('clientEmail').value,
+                property: document.getElementById('propertyInterest').value,
+                budget: document.getElementById('budget').value,
+                status: document.getElementById('status').value,
+                notes: document.getElementById('notes').value,
+                createdAt: new Date().toISOString()
+            };
+
+            clients.unshift(newClient);
+            localStorage.setItem('crmClients', JSON.stringify(clients));
+            
+            this.reset();
+            updateDashboard();
+            renderClients();
+        });
+
+        // Delete client
+        function deleteClient(index) {
+            if (confirm('Are you sure you want to delete this client?')) {
+                clients.splice(index, 1);
+                localStorage.setItem('crmClients', JSON.stringify(clients));
+                updateDashboard();
+                renderClients();
+            }
+        }
+
+        // Edit client (simplified - just change status)
+        function editClient(index) {
+            const client = clients[index];
+            const newStatus = prompt(
+                `Change status for ${client.name}:\n\n` +
+                `1. New Lead\n2. Contacted\n3. Negotiating\n4. Closed\n5. Lost\n\n` +
+                `Enter number (1-5):`,
+                ''
+            );
+
+            const statuses = ['New Lead', 'Contacted', 'Negotiating', 'Closed', 'Lost'];
+            const statusIndex = parseInt(newStatus) - 1;
+
+            if (statusIndex >= 0 && statusIndex < 5) {
+                clients[index].status = statuses[statusIndex];
+                localStorage.setItem('crmClients', JSON.stringify(clients));
+                updateDashboard();
+                renderClients();
+            }
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.getAttribute('data-filter');
+                renderClients();
+            });
+        });
+
+        // Initialize on load
+        updateDashboard();
+        renderClients();
+    </script>
+</body>
+</html>
