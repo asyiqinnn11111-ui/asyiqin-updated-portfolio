@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Nur Asyiqin Ahmad - Senior Sales & Marketing Executive | Web Developer</title>
+    <meta name="title" content="Nur Asyiqin Ahmad - Senior Sales & Marketing Executive | Web Developer">
+    <meta name="description" content="Dynamic Sales & Marketing Executive with 100+ units sold and proven web development expertise. Specializing in real estate sales, digital marketing, and luxury property showcases.">
+    <meta name="keywords" content="Nur Asyiqin Ahmad, Sales Executive, Marketing Executive, Web Developer, Real Estate, Sibu Sarawak, Property Sales, Digital Marketing, WHE Group">
+    <meta name="author" content="Nur Asyiqin Ahmad">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asyiqinnn11111-ui.github.io/">
+    <meta property="og:title" content="Nur Asyiqin Ahmad - Senior Sales & Marketing Executive | Web Developer">
+    <meta property="og:description" content="Dynamic Sales & Marketing Executive with 100+ units sold and proven web development expertise. Specializing in real estate sales, digital marketing, and luxury property showcases.">
+    <meta property="og:image" content="https://asyiqinnn11111-ui.github.io/preview.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://asyiqinnn11111-ui.github.io/">
+    <meta property="twitter:title" content="Nur Asyiqin Ahmad - Senior Sales & Marketing Executive | Web Developer">
+    <meta property="twitter:description" content="Dynamic Sales & Marketing Executive with 100+ units sold and proven web development expertise.">
+    <meta property="twitter:image" content="https://asyiqinnn11111-ui.github.io/preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='65' font-family='Arial' font-size='60' font-weight='bold' fill='%23D4AF37' text-anchor='middle'>NA</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+          --gold: #D4AF37;
+          --gold-light: #F4E4B5;
+          --dark: #0a0a0a;
+          --dark-card: #121212;
+          --gray: #888888;
+        }
+        
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+          font-family: 'Montserrat', sans-serif;
+          overflow-x: hidden;
+          background: var(--dark);
+          color: white;
+        }
+        
+        .heading-font {
+          font-family: 'Playfair Display', serif;
+        }
+        
+        .fade-in {
+          opacity: 0;
+          transform: translateY(30px);
+          animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        
+        .gradient-text {
+          background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        
+        .card-hover {
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .card-hover:hover {
+          transform: translateY(-8px);
+          border-color: rgba(212, 175, 55, 0.3);
+          box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+        }
+        
+        .stat-line {
+          width: 0;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, var(--gold), transparent);
+          animation: expandLine 1.5s ease forwards;
+          margin: 0 auto;
+        }
+        
+        @keyframes expandLine {
+          to { width: 100%; }
+        }
+        
+        .accent-line {
+          width: 60px;
+          height: 2px;
+          background: var(--gold);
+          margin: 1rem 0;
+        }
+        
+        .shimmer {
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .shimmer::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+          animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+          to { left: 100%; }
+        }
+        
+        .tech-tag {
+          display: inline-block;
+          padding: 0.4rem 1rem;
+          background: rgba(212, 175, 55, 0.1);
+          border: 1px solid rgba(212, 175, 55, 0.3);
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          transition: all 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+          background: rgba(212, 175, 55, 0.2);
+          border-color: var(--gold);
+          transform: scale(1.05);
+        }
+        
+        .floating {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        .grid-pattern {
+          background-image: 
+            linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+          background-size: 50px 50px;
+        }
+
+        /* Layout Styles */
+        section {
+            position: relative;
+        }
+
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, rgba(10, 10, 10, 0.5), #0a0a0a);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            max-width: 48rem;
+            margin: 0 auto 2rem;
+            line-height: 1.75;
+            font-weight: 300;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .btn-primary {
+            padding: 1rem 2rem;
+            background: var(--gold);
+            color: black;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+        }
+
+        .btn-secondary {
+            padding: 1rem 2rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0); }
+          50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .stats-section {
+            padding: 6rem 0;
+            background: var(--dark-card);
+        }
+
+        .stats-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-sublabel {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            letter-spacing: 0.05em;
+        }
+
+        .about-section {
+            padding: 6rem 0;
+            background: var(--dark);
+        }
+
+        .about-container {
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero-title {
+                font-size: 6rem;
+            }
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--dark-card);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .skill-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .projects-section {
+            padding: 6rem 0;
+            background: var(--dark-card);
+        }
+
+        .projects-container {
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--dark);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .project-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .project-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title-row svg {
+            color: var(--gold);
+            width: 24px;
+            height: 24px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .project-type {
+            font-size: 0.875rem;
+            color: var(--gold);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+        }
+
+        .project-impact {
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .impact-label {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        .impact-value {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .contact-section {
+            padding: 6rem 0;
+            background: var(--dark);
+        }
+
+        .contact-container {
+            max-width: 896px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .contact-description {
+            color: #d1d5db;
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+            line-height: 1.75;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .contact-cards {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        .contact-card {
+            background: var(--dark-card);
+            padding: 1.5rem 2rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            transition: all 0.3s;
+            min-width: 300px;
+        }
+
+        @media (min-width: 640px) {
+            .contact-card {
+                width: auto;
+                min-width: 320px;
+            }
+        }
+
+        .contact-card:hover {
+            background: #1a1a1a;
+        }
+
+        .contact-card svg {
+            color: var(--gold);
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .contact-info {
+            text-align: left;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-label {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            margin-bottom: 2px;
+            white-space: nowrap;
+        }
+
+        .contact-value {
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        footer {
+            padding: 3rem 0;
+            background: var(--dark-card);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .footer-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-subtitle {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+
+        .footer-copyright {
+            color: #6b7280;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .project-link-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: #D4AF37;
+            color: #0a0a0a;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .project-link-btn:hover {
+            background: #F4E4B5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .about-text h2 {
+                font-size: 3rem;
+            }
+            .section-header h2 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section grid-pattern">
+        <div class="hero-gradient"></div>
+        
+        <div class="hero-content">
+            <div class="fade-in">
+                <div class="subtitle">
+                    SENIOR SALES & MARKETING EXECUTIVE
+                </div>
+                <h1 class="heading-font hero-title">
+                    Nur Asyiqin
+                    <span class="gradient-text">Ahmad</span>
+                </h1>
+                <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+                <p class="hero-description">
+                    Dynamic Sales & Marketing Executive with proven track record in real estate.
+                    <br class="hidden-mobile" />
+                    100+ units sold. Data-driven strategies. Self-taught web developer.
+                </p>
+                <div class="button-group">
+                    <a href="#contact" class="btn-primary">
+                        GET IN TOUCH 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#projects" class="btn-secondary">
+                        VIEW WORK
+                    </a>
+                    <a href="./NurAsyiqinAhmad-Resume.pdf" download="NurAsyiqinAhmad-Resume.pdf" class="btn-secondary" target="_blank">
+                        📄 DOWNLOAD RESUME
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" style="transform: rotate(90deg);">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item fade-in delay-1">
+                <div class="stat-line"></div>
+                <div class="heading-font stat-value gradient-text" data-target="100">0+</div>
+                <div class="stat-label">Units Sold</div>
+                <div class="stat-sublabel">in 12 months</div>
+            </div>
+            <div class="stat-item fade-in delay-2">
+                <div class="stat-line"></div>
+                <div class="heading-font stat-value gradient-text" data-target="7">0+</div>
+                <div class="stat-label">Years Experience</div>
+                <div class="stat-sublabel">Sales & Marketing</div>
+            </div>
+            <div class="stat-item fade-in delay-3">
+                <div class="stat-line"></div>
+                <div class="heading-font stat-value gradient-text" data-target="3">0</div>
+                <div class="stat-label">Websites Built</div>
+                <div class="stat-sublabel">Self-developed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="subtitle">ABOUT ME</div>
+                    <h2 class="heading-font">
+                        Where Sales Meets
+                        <span class="gradient-text">Technology</span>
+                    </h2>
+                    <div class="accent-line"></div>
+                    <p>
+                        As a Senior Sales & Marketing Executive at WHE Contract Sdn Bhd in Sibu, Sarawak, I achieved exceptional sales performance of 100+ residential units within 12 months for the SPEKTRA HOUSE development (RM100,000-RM198,000 range).
+                    </p>
+                    <p>
+                        I independently designed and developed a full-featured luxury property showcase website from scratch, incorporating interactive property displays, real-time contact integration, Google Analytics tracking, and premium UI/UX elements for high-value developments ranging from RM325,000 to RM430,000.
+                    </p>
+                    <p>
+                        With a Diploma in Cooperative Management from ICOOP College (Dean's List Honors, 2016) and proven expertise across sales, digital marketing, and web development, I combine technical proficiency with strategic business acumen to drive measurable results. Fluent in Malay, English, and Indonesian.
+                    </p>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skill-card card-hover shimmer fade-in delay-3">
+                        <h3 class="gradient-text heading-font">Sales & Marketing</h3>
+                        <div class="skill-tags">
+                            <span class="tech-tag">Strategic Sales Planning</span>
+                            <span class="tech-tag">Client Relationship Management</span>
+                            <span class="tech-tag">Revenue Generation</span>
+                            <span class="tech-tag">Market Analysis</span>
+                            <span class="tech-tag">Property Showcase</span>
+                        </div>
+                    </div>
+                    <div class="skill-card card-hover shimmer fade-in delay-4">
+                        <h3 class="gradient-text heading-font">Web Development & Analytics</h3>
+                        <div class="skill-tags">
+                            <span class="tech-tag">HTML5/CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">GitHub/Version Control</span>
+                            <span class="tech-tag">Google Analytics</span>
+                            <span class="tech-tag">Microsoft Power BI</span>
+                            <span class="tech-tag">Data Analytics</span>
+                        </div>
+                    </div>
+                    <div class="skill-card card-hover shimmer fade-in delay-5">
+                        <h3 class="gradient-text heading-font">Languages & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="tech-tag">Malay (Native)</span>
+                            <span class="tech-tag">English (Fluent)</span>
+                            <span class="tech-tag">Indonesian (Proficient)</span>
+                            <span class="tech-tag">CRM Systems</span>
+                            <span class="tech-tag">Microsoft Office Suite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <div class="section-header">
+                <div class="subtitle">FEATURED WORK</div>
+                <h2 class="heading-font">
+                    Projects & <span class="gradient-text">Achievements</span>
+                </h2>
+                <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card card-hover shimmer fade-in delay-1">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h3 class="heading-font project-title">WHE Premium Portfolio Website</h3>
+                        </div>
+                        <div class="project-type">Full-Stack Development</div>
+                    </div>
+
+                    <p class="project-description">
+                        Independently designed and developed a full-featured luxury property showcase website incorporating interactive property displays, real-time contact integration, Google Analytics tracking, and premium UI/UX elements. Features WHE Group's premium developments: SPEKTRA HOUSE, ZUHRA Hotel, ZAYDA Vista, and Kemuyang Avenue Phase 5.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">GitHub Pages</span>
+                        <span class="tech-tag">Google Analytics</span>
+                        <span class="tech-tag">UI/UX Design</span>
+                    </div>
+
+                    <div class="project-impact">
+                        <div class="impact-label">Impact:</div>
+                        <div class="impact-value">Premium developments ranging RM325k-430k showcase</div>
+                    </div>
+
+                    <a href="https://asyiqinnn11111-ui.github.io/WHEGROUP-FINALL00K/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                        🌐 View Live Website
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card card-hover shimmer fade-in delay-2">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                            <h3 class="heading-font project-title">SPEKTRA HOUSE Campaign</h3>
+                        </div>
+                        <div class="project-type">Sales & Marketing Excellence</div>
+                    </div>
+
+                    <p class="project-description">
+                        Achieved exceptional sales performance of 100+ residential units within 12 months for SPEKTRA HOUSE development (RM100,000-RM198,000 range). Managed complete end-to-end sales cycles from initial prospect contact through needs assessment, property presentation, negotiation, and contract finalization. Consistently exceeded monthly sales targets through strategic lead generation and effective client qualification.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span class="tech-tag">Strategic Sales</span>
+                        <span class="tech-tag">Client Relations</span>
+                        <span class="tech-tag">Lead Generation</span>
+                        <span class="tech-tag">Negotiation</span>
+                    </div>
+
+                    <div class="project-impact">
+                        <div class="impact-label">Impact:</div>
+                        <div class="impact-value">100+ units sold in 12 months</div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card card-hover shimmer fade-in delay-3">
+                    <div class="project-header">
+                        <div class="project-title-row">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <h3 class="heading-font project-title">Property Sales CRM System</h3>
+                        </div>
+                        <div class="project-type">Full-Stack Development</div>
+                    </div>
+
+                    <p class="project-description">
+                        Built a complete Client Relationship Management system from scratch for real estate sales operations. Features automated client pipeline tracking, real-time revenue calculations, sales funnel management with status workflows (New Lead → Contacted → Negotiating → Closed), comprehensive analytics dashboard, and data persistence using browser local storage.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Local Storage API</span>
+                        <span class="tech-tag">Data Management</span>
+                        <span class="tech-tag">UI/UX Design</span>
+                    </div>
+
+                    <div class="project-impact">
+                        <div class="impact-label">Impact:</div>
+                        <div class="impact-value">Streamlined client management and real-time sales tracking</div>
+                    </div>
+
+                    <a href="property-sales-crm.html" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                        🎯 View Live CRM
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="subtitle">LET'S CONNECT</div>
+            <h2 class="heading-font section-header" style="margin-bottom: 1.5rem;">
+                Ready to Create
+                <span class="gradient-text">Something Amazing?</span>
+            </h2>
+            <div class="accent-line" style="margin-left: auto; margin-right: auto;"></div>
+            <p class="contact-description">
+                Whether you're looking for sales excellence, technical innovation, or a unique blend of both, 
+                I'd love to discuss how I can contribute to your team's success.
+            </p>
+
+            <div class="contact-cards">
+                <a href="mailto:asyiqinnn111@gmail.com" class="contact-card card-hover">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <div class="contact-info">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">asyiqinnn111@gmail.com</div>
+                    </div>
+                </a>
+                <a href="https://wa.me/601164446445" target="_blank" rel="noopener noreferrer" class="contact-card card-hover">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <div class="contact-info">
+                        <div class="contact-label">WhatsApp</div>
+                        <div class="contact-value">+60 11-6444 6445</div>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/asyiqin-ahmad-4a431539b" target="_blank" rel="noopener noreferrer" class="contact-card card-hover">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <div class="contact-info">
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">Connect with me</div>
+                    </div>
+                </a>
+                <a href="./NurAsyiqinAhmad-Resume.pdf" download="NurAsyiqinAhmad-Resume.pdf" class="contact-card card-hover" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <polyline points="9 15 12 18 15 15"></polyline>
+                    </svg>
+                    <div class="contact-info">
+                        <div class="contact-label">Resume</div>
+                        <div class="contact-value">Download PDF</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="heading-font footer-name">
+                <span class="gradient-text">Nur Asyiqin Ahmad</span>
+            </div>
+            <p class="footer-subtitle">
+                Senior Sales & Marketing Executive | Self-Taught Developer
+            </p>
+            <p class="footer-copyright">
+                © 2024 Nur Asyiqin Ahmad. Crafted with passion and precision.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Trigger animations on page load
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Counting animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16); // 60fps
+            let current = start;
+            const hasPlus = element.textContent.includes('+');
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (hasPlus ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (hasPlus ? '+' : '');
+                }
+            }, 16);
+        }
+
+        // Observe stats section for counting animation
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statValues = entry.target.querySelectorAll('.stat-value[data-target]');
+                    statValues.forEach((stat, index) => {
+                        const target = parseInt(stat.dataset.target);
+                        // Stagger the animations slightly
+                        setTimeout(() => {
+                            animateCounter(stat, target, 2000);
+                        }, index * 200);
+                    });
+                    statsObserver.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe the stats section
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Add active state to navigation on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+            });
+        });
+
+        // Prevent form submission default behavior if any forms are added later
+        document.addEventListener('submit', (e) => {
+            if (e.target.tagName === 'FORM') {
+                e.preventDefault();
+            }
+        });
+
+        // Add loading state
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
